@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* for importing fonts, go to google fonts -- search merriweather -- select all --  */
+
+body {
+    font-family: "Merriweather", serif;
+    background-color: #f9fafc; /* currently assigning to body, change individual colors later on so it stays to navbar only */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+}
+
+.navbar__brand {
+    width: 100px;
+}
+
+.navbar__logo {
+    width: 100%;
+}
+
+.nav__item {
+    background-image: linear-gradient(
+        to right,
+        #ff512f 0%,
+        #dd2476 51%,
+        #ff512f 100%
+    );
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.nav__item:hover {
+    /*background-position: right center; changing background gradient position
+    right to center i.e. opposite to left-right as we configured*/
+    /* this is not supported by browser so using diff. property */
+    border: 2px solid #FF6767;
+    cursor: pointer; /* means hand comes at this*/
+
+    /* other example to apply other gradient
+    background-image: linear-gradient(
+        to right,
+        #dd2476 0%,
+        #ff512f 51%,
+        #dd2476 100%
+    ); */
+}
+
+@media (min-width : 768px) {
+    .navbar {
+        justify-content: space-between;
+        padding: 10px 30px;
+    }
+}
+
+@media (min-width : 1024px) {
+    .navbar__brand {
+        width: 150px;
+    }
+
+    .nav__item {
+        padding: 20px;
+        font-size: 20px;
+    }
+}
